@@ -19,12 +19,14 @@ function App() {
       </div>
       <h1>Vite + React + Thelp</h1>
       <div className="card">
-        <button onClick={() => setNegativeCount((negativeCount) => negativeCount - 1)}>
-          negative count is {negativeCount}
-        </button>
-
         <button onClick={() => setCount((count) => count + 1)}>
           count is {count}
+        </button>
+
+        <br></br>
+
+        <button onClick={() => setNegativeCount((negativeCount) => negativeCount - 1)}>
+          negative count is {negativeCount}
         </button>
         <p>SamuelDev15</p>
         <button className="refreshButton" onClick={() => window.location.reload()}> Refresh </button>
