@@ -20,7 +20,7 @@ function App() {
       <h1>Vite + React + Thelp</h1>
       <div className="card">
         <button onClick={() => setNegativeCount((negativeCount) => negativeCount - 1)}>
-          count is {negativeCount}
+          negative count is {negativeCount}
         </button>
 
         <button onClick={() => setCount((count) => count + 1)}>
