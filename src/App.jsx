@@ -11,6 +11,49 @@ const mock_nevera = {
   weight: "62kg",
 };
 
+const mock_cellPhone = {
+  name: "Samsung Galaxy S21",
+  price: "1200000",
+  color: "Blanco",
+  weight: "62kg",
+  screen: "6.5 pulgadas",
+  processor: "Snapdragon 888",
+  ram: "8GB",
+  storage: "128GB",
+  camera: "108MP",
+  battery: "4000mAh",
+};
+
+function Features(props) {
+  const features = props.cellPhone;
+  const {
+    name,
+    price,
+    color,
+    weight,
+    screen,
+    processor,
+    ram,
+    storage,
+    camera,
+    battery } = features;
+
+  return (
+    <>
+      <h1>Características del {name}</h1>
+      <p>{price}</p>
+      <p>{color}</p>
+      <p>{weight}</p>
+      <p>{screen}</p>
+      <p>{processor}</p>
+      <p>{ram}</p>
+      <p>{storage}</p>
+      <p>{camera}</p>
+      <p>{battery}</p>
+    </>
+  )
+};
+
 function NeveraComponent(props) {
   return (
     <div>
@@ -64,6 +107,8 @@ function App() {
         activo={true}
         promocion={75}
       />
+
+      <Features cellPhone={mock_cellPhone} />
     </>
   )
 }
