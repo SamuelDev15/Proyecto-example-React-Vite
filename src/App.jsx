@@ -21,11 +21,20 @@ const mock_cellPhone = {
   ram: "8GB",
   storage: "128GB",
   camera: "108MP",
-  battery: "4000mAh",
+  battery: "4000mAh"
+};
+
+const Mock_salesOutlets = {
+  Punto1: "Claro oficial",
+  Punto2: "Movistar",
+  Punto3: "Tigo",
+  Punto4: "Almacenes Éxito",
+  Punto5: "Falabella"
 };
 
 function Features(props) {
   const features = props.cellPhone;
+  const salesOutlets = props.salesOutlets;
   const {
     name,
     price,
@@ -36,7 +45,14 @@ function Features(props) {
     ram,
     storage,
     camera,
-    battery } = features;
+    battery
+  } = features;
+
+  const { Punto1,
+    Punto2,
+    Punto3,
+    Punto4,
+    Punto5 } = salesOutlets;
 
   return (
     <>
@@ -50,6 +66,13 @@ function Features(props) {
       <p>{storage}</p>
       <p>{camera}</p>
       <p>{battery}</p>
+
+      <h2>Salas de ventas</h2>
+      <p>{Punto1}</p>
+      <p>{Punto2}</p>
+      <p>{Punto3}</p>
+      <p>{Punto4}</p>
+      <p>{Punto5}</p>
     </>
   )
 };
@@ -108,7 +131,7 @@ function App() {
         promocion={75}
       />
 
-      <Features cellPhone={mock_cellPhone} />
+      <Features cellPhone={mock_cellPhone} salesOutlets={Mock_salesOutlets} />
     </>
   )
 }
